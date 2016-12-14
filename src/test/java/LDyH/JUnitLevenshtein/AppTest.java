@@ -6,22 +6,31 @@ import org.junit.*;
 
 
 /**
- * Unit test for simple App.
+ * Clase de pruebas unitarias para clase de algoritmo de Levenshtein
  */
 public class AppTest
 {
 	private DistanciaLevenshtein dist;
+	/**
+	 * Inicialización de objeto de clase de algoritmo de Levenshtein antes de cada test
+	 */
 	@Before
 	public void inicializarCalculador() {
 		dist = new  DistanciaLevenshtein();
 	}
 
+	/**
+	 * Terminación de objeto tras la ejecución de cada test
+	 */
 	@After
 	public void cerrarCalculador()
 	{
 		dist = null;
 	}
 
+	/**
+	 * Pruebas de cálculo y retorno correcto de distancia o semejanza entre cadenas diferentes
+	 */
 	@Test
 	public void cadenasDiferentes()
 	{
@@ -34,6 +43,9 @@ public class AppTest
 		assertEquals(5, dist.DistanciaEntrePalabras("", "crear"));
 	}
 
+	/**
+	 * Pruebas de retorno de distancia nula o semejanza perfecta entre cadenas equivalentes
+	 */
     @Test
 	public void cadenasEquivalentes()
 	{
