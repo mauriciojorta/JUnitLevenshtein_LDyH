@@ -7,6 +7,8 @@ import org.junit.*;
 
 /**
  * Clase de pruebas unitarias para clase de algoritmo de Levenshtein
+ * @author Mauricio
+ *
  */
 public class AppTest
 {
